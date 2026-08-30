@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-color: black;
+    overflow: hidden;
+}
+main{
+    height: 100%;
+    width: 100%;
+    .carousel-scene{
+        height: 100%;
+        width: 100%;
+        perspective: 1300px;
+
+        .carousel{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform-style: preserve-3d;
+            position: relative;
+            animation: spin 8s linear infinite;
+// & -> current parent(.carousel) selector
+//:has() ka simple meaning hai: "Aisa (.carousel) jiske andar ye condition true ho."
+              &:has(.carousel-item:hover) {
+                animation-play-state: paused;
+            }
+
+            .carousel-item{
+                height: 25%;
+                width: 13%;
+                position: absolute;
+                backface-visibility: hidden;
+
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+                
+            }
+
+            .carousel-item:nth-child(1){
+                transform: rotateY(0deg) translateZ(300px);
+            }
+            .carousel-item:nth-child(2){
+                transform: rotateY(45deg) translateZ(300px);
+            }
+            .carousel-item:nth-child(3){
+                transform: rotateY(90deg) translateZ(300px);
+            }
+            .carousel-item:nth-child(4){
+                transform: rotateY(135deg) translateZ(300px);
+            }
+            .carousel-item:nth-child(5){
+                transform: rotateY(180deg) translateZ(300px);
+            }
+            .carousel-item:nth-child(6){
+                transform: rotateY(225deg) translateZ(300px);
+            }
+            .carousel-item:nth-child(7){
+                transform: rotateY(270deg) translateZ(300px);
+            }
+            .carousel-item:nth-child(8){
+                transform: rotateY(315deg) translateZ(300px);
+            }
+        }
+    }
+}
+@keyframes spin{
+    from {
+        transform: rotatey(0deg);
+    }
+    to {
+        transform: rotatey(-360deg);
+    }
+}
