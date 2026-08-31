@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-color: black;
+}
+main{
+
+    .marque-wrapper{
+        height: 40vh;
+        width: 100vw;
+        background-color: pink;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        // gap: 10px;
+
+        .marque-track{
+            height: 100px;
+            width: 100%;
+            background-color: aqua;
+            flex-shrink: 0;
+            // border: 2px solid black;
+            animation: marque-Animation 10s linear infinite;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap: 1rem;
+
+            img{
+                height: 80%;
+                object-fit: cover;
+            }
+        }
+        
+    }
+    
+}
+@keyframes marque-Animation {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
