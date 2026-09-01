@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: black;
+}
+
+@keyframes identifier {
+  from {
+    scale: 1;
+  }
+  to {
+    background-color: greenyellow;
+    scale: 2;
+  }
+}
+main .box {
+  height: 300px;
+  width: 300px;
+  background-color: rgb(135, 134, 134);
+  animation: identifier 3s steps(10) alternate infinite;
+}/*# sourceMappingURL=style.css.map */

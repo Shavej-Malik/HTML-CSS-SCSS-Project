@@ -1,0 +1,1 @@
+transition: all 0.5s ease; -> ease mean constant speed

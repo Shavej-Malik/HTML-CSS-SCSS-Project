@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: black;
+}
+
+main {
+  display: flex;
+  gap: 1rem;
+}
+main .box {
+  height: 400px;
+  width: 400px;
+  background-color: red;
+  transition: all 0.5s ease-out, scale 0.5s ease-out;
+  overflow: hidden;
+}
+main .box img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.5s ease-out;
+}
+main .box:hover img {
+  scale: 1.2;
+}
+main .box1 {
+  height: 400px;
+  width: 400px;
+  background-color: blue;
+  transition: all 0.5s ease-in;
+  overflow: hidden;
+}
+main .box1:hover {
+  transform: translateX(50px) rotate(2deg) scale(1.2);
+  background-color: rgba(255, 255, 0, 0.542);
+}
+main .box2 {
+  height: 400px;
+  width: 400px;
+  background-color: rgb(145, 144, 144);
+  transform-origin: top left;
+  transition: all 0.5s ease;
+}
+main .box2:hover {
+  transform: rotate(10deg);
+}/*# sourceMappingURL=style.css.map */

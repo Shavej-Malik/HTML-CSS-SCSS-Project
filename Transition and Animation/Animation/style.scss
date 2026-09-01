@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-color: black;
+}
+main{
+
+    @keyframes identifier {
+        // 0%{
+        //     scale: 1;
+        // }
+        // 20%{
+        //     background-color: aqua;
+        //     scale: 1.2;
+        // }
+        // 50%{
+        //     background-color: pink;
+        //     scale: 1.5;
+        // }
+        // 75%{
+        //     background-color: greenyellow;
+        //     scale: 1.7;
+        // }
+        // 100%{
+        //     background-color: whitesmoke;
+        //     scale: 2;
+        // }
+
+        from {
+            scale: 1;
+        }
+        to {
+            background-color: greenyellow;
+            scale: 2;
+        }
+    }
+    .box{
+        height: 300px;
+        width: 300px;
+        background-color: rgb(135, 134, 134);
+        // animation: identifier 3s linear alternate infinite;
+        animation: identifier 3s steps(10) alternate infinite;
+    }
+}
