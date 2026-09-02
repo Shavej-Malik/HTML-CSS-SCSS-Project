@@ -1,0 +1,453 @@
+@font-face {
+  font-family: first-font;
+  src: url(./Font\ Planner\ Cloud.woff2);
+}
+@font-face {
+  font-family: second-font;
+  src: url(./Armadillo.woff2);
+}
+@font-face {
+  font-family: third-font;
+  src: url(./ForegaSportDEMO-Regular.woff2);
+}
+@font-face {
+  font-family: fourth-font;
+  src: url(./TrueArabic-Thin.woff2);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+main .Landing-page {
+  height: 120vh;
+  width: 100%;
+}
+main .Landing-page .section-top {
+  height: 55%;
+  width: 100%;
+  background-color: #FD1C00;
+  padding: 1rem;
+}
+main .Landing-page .section-top nav {
+  height: 45%;
+  width: 100%;
+  display: flex;
+}
+main .Landing-page .section-top nav .nav-left {
+  height: 100%;
+  width: 50%;
+  padding: 1rem;
+  font-family: second-font;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: whitesmoke;
+}
+main .Landing-page .section-top nav .nav-left .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+main .Landing-page .section-top nav .nav-left .nav-links h3 {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1.3rem;
+  cursor: pointer;
+  font-weight: 400;
+  animation: animate-page-para 2s ease;
+}
+main .Landing-page .section-top nav .nav-left .nav-links::before {
+  content: "";
+  height: 10%;
+  width: 1vw;
+  background-color: white;
+  transition: all 0.2s ease;
+}
+main .Landing-page .section-top nav .nav-left .nav-links:hover::before {
+  width: 2vw;
+  transform-origin: left;
+}
+main .Landing-page .section-top nav .nav-right {
+  height: 100%;
+  width: 50%;
+  padding: 1rem;
+  color: whitesmoke;
+}
+main .Landing-page .section-top nav .nav-right p {
+  width: 25ch;
+  font-size: 1rem;
+  color: whitesmoke;
+  margin-bottom: 1rem;
+  animation: animate-page-para 2s ease;
+}
+main .Landing-page .section-top .heading {
+  height: 55%;
+  width: 100%;
+  display: flex;
+  align-items: end;
+  overflow: hidden;
+}
+main .Landing-page .section-top .heading h1 {
+  font-family: fourth-font;
+  font-size: 15rem;
+  font-weight: 900;
+  line-height: 0.9;
+  color: whitesmoke;
+  animation: animate-page-text 1s ease;
+}
+main .Landing-page .section-bottom {
+  height: 45%;
+  width: 100%;
+  overflow: hidden;
+}
+main .Landing-page .section-bottom img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  animation: landing-page-img 1s ease;
+  transition: scale 0.5s ease;
+}
+main .Landing-page .section-bottom:hover img {
+  scale: 1.1;
+}
+@keyframes landing-page-img {
+  from {
+    transform: scale(1.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes animate-page-text {
+  from {
+    transform: translateY(130%);
+  }
+  to {
+    transform: translate(0);
+  }
+}
+@keyframes animate-page-para {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+main .Landing-page2 {
+  height: 100vh;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+main .Landing-page2 .section1 {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  border-top: 2px solid black;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+main .Landing-page2 .section1 .number-div {
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+main .Landing-page2 .section1 .number-div h2 {
+  font-size: 15rem;
+  font-family: Helvetica;
+  font-weight: 100;
+  letter-spacing: -1rem;
+  transition: all 1s ease;
+}
+main .Landing-page2 .section1 .info-div {
+  height: 100%;
+  width: 50%;
+  display: flex;
+}
+main .Landing-page2 .section1 .info-div .discription {
+  height: 100%;
+  width: 70%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main .Landing-page2 .section1 .info-div .discription p {
+  font-family: fourth-font;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 900;
+}
+main .Landing-page2 .section1 .info-div .discription h2 {
+  cursor: pointer;
+  font-family: second-font;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  transition: all 1s ease;
+}
+main .Landing-page2 .section1 .info-div .discription h2::after {
+  content: "";
+  position: absolute;
+  height: 5%;
+  width: 0%;
+  left: 0;
+  bottom: 0;
+  background-color: black;
+  transition: width 0.5s ease;
+}
+main .Landing-page2 .section1 .info-div .discription h2:hover::after {
+  width: 100%;
+}
+main .Landing-page2 .section1 .info-div .image {
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+  transform: translateY(92%);
+  transition: transform 1s ease;
+}
+main .Landing-page2 .section1 .info-div .image img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  transition: all 0.5s ease;
+}
+main .Landing-page2 .section1 .info-div .image img:hover {
+  scale: 1.2;
+}
+main .Landing-page2 .section1:hover {
+  background-color: red;
+}
+main .Landing-page2 .section1:hover .image {
+  transform: translateY(0%);
+}
+main .Landing-page2 .section1:hover .discription h2 {
+  color: white;
+}
+main .Landing-page2 .section1:hover .number-div h2 {
+  color: white;
+}
+main .marque-section {
+  height: 20vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  padding: 1rem;
+}
+main .marque-section .marque-track {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-shrink: 0;
+  animation: marque-animation 10s linear infinite;
+}
+main .marque-section .marque-track img {
+  height: 100%;
+  width: cal(100%/6);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .marque-section:hover .marque-track {
+  animation-play-state: paused;
+}
+@keyframes marque-animation {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+main footer .footer {
+  height: 70vh;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+main footer .footer .left-section {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+main footer .footer .left-section .footer-image {
+  height: 80%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+main footer .footer .left-section .footer-image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: saturate(0%);
+  transition: all 1s ease;
+}
+main footer .footer .left-section .footer-image:hover img {
+  scale: 1.1;
+  filter: saturate(100%);
+}
+main footer .footer .left-section .footer-para {
+  padding: 2rem;
+}
+main footer .footer .left-section .footer-para p {
+  font-size: 1.5rem;
+  font-family: fourth-font;
+  line-height: 1;
+  font-weight: 900;
+}
+main footer .footer-bottom {
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+main footer .footer-bottom h2 {
+  height: 30vh;
+  font-size: 20rem;
+  font-family: Helvetica;
+  transition: all 0.5s ease;
+  -webkit-text-stroke: 2px black;
+}
+main footer .footer-bottom:hover h2 {
+  background-color: #FD1C00;
+  color: white;
+  -webkit-text-stroke: 2px black;
+}
+
+@media (max-width: 768px) {
+  main .Landing-page {
+    height: auto;
+  }
+  main .Landing-page .section-top {
+    height: auto;
+    min-height: 70vh;
+  }
+  main .Landing-page .section-top nav {
+    height: auto;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  main .Landing-page .section-top nav .nav-left,
+  main .Landing-page .section-top nav .nav-right {
+    width: 100%;
+    height: auto;
+  }
+  main .Landing-page .section-top nav .nav-left {
+    padding: 0.5rem;
+  }
+  main .Landing-page .section-top nav .nav-right {
+    padding: 0.5rem;
+  }
+  main .Landing-page .section-top nav .nav-right p {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+  main .Landing-page .section-top .heading {
+    height: auto;
+    min-height: 30vh;
+    align-items: end;
+  }
+  main .Landing-page .section-top .heading h1 {
+    font-size: 22vw;
+  }
+  main .Landing-page .section-bottom {
+    height: 40vh;
+  }
+  main .Landing-page2 {
+    height: auto;
+  }
+  main .Landing-page2 .section1 {
+    height: auto;
+    min-height: 350px;
+    flex-direction: column;
+  }
+  main .Landing-page2 .section1 .number-div {
+    width: 100%;
+    height: 100px;
+  }
+  main .Landing-page2 .section1 .number-div h2 {
+    font-size: 7rem;
+    letter-spacing: -0.5rem;
+  }
+  main .Landing-page2 .section1 .info-div {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+  main .Landing-page2 .section1 .info-div .discription {
+    width: 100%;
+    min-height: 180px;
+    padding: 1rem;
+  }
+  main .Landing-page2 .section1 .info-div .discription p {
+    font-size: 1.1rem;
+  }
+  main .Landing-page2 .section1 .info-div .image {
+    width: 100%;
+    height: 250px;
+    transform: translateY(0);
+  }
+  main .marque-section {
+    height: 100px;
+  }
+  main .marque-section .marque-track img {
+    width: 120px;
+    flex-shrink: 0;
+  }
+  main footer .footer {
+    height: auto;
+    flex-direction: column;
+  }
+  main footer .footer .left-section {
+    width: 100%;
+    height: auto;
+  }
+  main footer .footer .left-section .footer-image {
+    height: 350px;
+  }
+  main footer .footer .left-section .footer-para {
+    padding: 1rem;
+  }
+  main footer .footer .left-section .footer-para p {
+    font-size: 1.2rem;
+  }
+  main footer .footer-bottom {
+    height: 120px;
+  }
+  main footer .footer-bottom h2 {
+    height: auto;
+    font-size: 20vw;
+    white-space: nowrap;
+  }
+}/*# sourceMappingURL=style.css.map */

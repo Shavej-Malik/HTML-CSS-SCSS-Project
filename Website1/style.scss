@@ -1,0 +1,579 @@
+@font-face {
+    font-family: first-font;
+    src: url(./Font\ Planner\ Cloud.woff2);
+}
+
+@font-face {
+    font-family: second-font;
+    src: url(./Armadillo.woff2);
+}
+
+@font-face {
+    font-family: third-font;
+    src: url(./ForegaSportDEMO-Regular.woff2);
+}
+
+@font-face {
+    font-family: fourth-font;
+    src: url(./TrueArabic-Thin.woff2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    // padding: 1rem;
+
+    .Landing-page {
+        height: 120vh;
+        width: 100%;
+        // background-color: blue;
+
+        .section-top {
+            height: 55%;
+            width: 100%;
+            background-color: #FD1C00;
+            padding: 1rem;
+
+            nav {
+                height: 45%;
+                width: 100%;
+                display: flex;
+
+                .nav-left {
+                    height: 100%;
+                    width: 50%;
+                    padding: 1rem;
+                    font-family: second-font;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    color: whitesmoke;
+
+                    .nav-links {
+                        display: flex;
+                        align-items: center;
+                        gap: 0.5rem;
+                        position: relative;
+                        width: fit-content;
+
+                        h3 {
+                            width: fit-content;
+                            font-size: 1.3rem;
+                            cursor: pointer;
+                            font-weight: 400;
+                            animation: animate-page-para 2s ease;
+                        }
+                    }
+
+                    .nav-links::before {
+                        content: ""; //::before aur ::after ko display karne ke liye content dena zaroori hota hai.
+                        height: 10%;
+                        width: 1vw;
+                        background-color: white;
+                        transition: all 0.2s ease;
+                    }
+
+                    .nav-links:hover::before {
+                        // transform: scale(1.5);
+                        width: 2vw;
+                        transform-origin: left;
+                    }
+                }
+
+                .nav-right {
+                    height: 100%;
+                    width: 50%;
+                    // background-color:rebeccapurple;
+                    padding: 1rem;
+                    color: whitesmoke;
+
+                    p {
+                        width: 25ch; //Isse paragraph ki line length controlled rehti hai aur text bahut zyada wide nahi hota.
+                        font-size: 1rem;
+                        color: whitesmoke;
+                        margin-bottom: 1rem;
+                        animation: animate-page-para 2s ease;
+
+                    }
+
+                }
+
+            }
+
+            .heading {
+                height: 55%;
+                width: 100%;
+                // background-color: goldenrod;
+                display: flex;
+                align-items: end;
+                overflow: hidden;
+
+                h1 {
+                    font-family: fourth-font;
+                    font-size: 15rem;
+                    font-weight: 900;
+                    line-height: 0.9;
+                    color: whitesmoke;
+                    animation: animate-page-text 1s ease;
+                }
+            }
+        }
+
+        .section-bottom {
+            height: 45%;
+            width: 100%;
+            overflow: hidden;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                animation: landing-page-img 1s ease;
+                transition: scale 0.5s ease;
+            }
+        }
+
+        .section-bottom:hover img {
+            scale: 1.1;
+        }
+
+        @keyframes landing-page-img {
+            from {
+                transform: scale(1.5);
+            }
+
+            to {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes animate-page-text {
+            from {
+                transform: translateY(130%);
+            }
+
+            to {
+                transform: translate(0);
+            }
+        }
+
+        @keyframes animate-page-para {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    }
+
+    .Landing-page2 {
+        height: 100vh;
+        width: 100%;
+        // background-color: pink;
+        margin-top: 1rem;
+        padding: 1rem;
+
+
+        .section1 {
+            height: 200px;
+            width: 100%;
+            display: flex;
+            border-top: 2px solid black;
+            transition: all 0.5s ease;
+            overflow: hidden;
+            // background-color: #3d3d3d;
+
+            .number-div {
+                height: 100%;
+                width: 50%;
+                // background-color: aqua;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+
+
+                h2 {
+                    font-size: 15rem;
+                    font-family: Helvetica;
+                    font-weight: 100;
+                    letter-spacing: -1rem;
+                    transition: all 1s ease;
+                }
+            }
+
+            .info-div {
+                height: 100%;
+                width: 50%;
+                // background-color: brown;
+                display: flex;
+
+                .discription {
+                    height: 100%;
+                    width: 70%;
+                    // background-color: chartreuse;
+                    padding: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    p {
+                        font-family: fourth-font;
+                        font-size: 1.5rem;
+                        line-height: 1.2;
+                        font-weight: 900;
+                    }
+
+                    h2 {
+                        cursor: pointer;
+                        font-family: second-font;
+                        // border-bottom: 2px solid black;
+                        width: fit-content;
+                        position: relative;
+                        transition: all 1s ease;
+
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            height: 5%;
+                            width: 0%;
+                            left: 0;
+                            // top: 0;
+                            bottom: 0;
+                            background-color: black;
+                            transition: width 0.5s ease;
+                        }
+
+                        &:hover::after {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .image {
+                    height: 100%;
+                    width: 50%;
+                    // background-color: olive;
+                    overflow: hidden;
+                    padding: 1rem;
+                    display: flex;
+                    justify-content: space-evenly;
+                    gap: 1rem;
+                    transform: translateY(92%);
+                    transition: transform 1s ease;
+
+
+                    img {
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                        transition: all 0.5s ease;
+
+                        &:hover {
+                            scale: 1.2;
+
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+        .section1:hover {
+            background-color: red;
+
+            .image {
+                transform: translateY(0%);
+            }
+
+            .discription h2 {
+                color: white;
+            }
+
+            .number-div h2 {
+                color: white;
+            }
+
+        }
+    }
+
+    .marque-section {
+        height: 20vh;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        padding: 1rem;
+        // background-color: pink;
+
+        .marque-track {
+            height: 100%;
+            width: 100%;
+            // background-color:blue;
+            display: flex;
+            justify-content: space-around;
+            flex-shrink: 0;
+            animation: marque-animation 10s linear infinite;
+
+            img {
+                height: 100%;
+                width: cal(100%/6);
+                object-fit: cover;
+            }
+        }
+
+        &:hover {
+            .marque-track {
+                animation-play-state: paused;
+            }
+        }
+
+        @keyframes marque-animation {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-100%);
+            }
+        }
+    }
+
+    footer{
+
+        .footer{
+            height: 70vh;
+            width: 100%;
+            padding: 1rem;
+            display: flex;
+            gap: 0.5rem;
+            
+            .left-section{
+                height: 100%;
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                
+                
+                .footer-image{
+                    height: 80%;
+                    width: 100%;
+                    overflow: hidden;
+                    border-radius: 1rem;
+                    
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        filter: saturate(0%);//this make black & white of colorfull image
+                        transition: all 1s ease;
+                    }
+                    
+                }
+                .footer-image:hover{
+                    img{
+                        scale: 1.1;
+                        filter: saturate(100%)
+                    }
+                }
+                
+                .footer-para{
+                    padding: 2rem;
+                    
+                    p{
+                        font-size: 1.5rem;
+                        font-family: fourth-font;
+                        line-height: 1;
+                        font-weight: 900;
+                    }
+                }
+            }
+        }
+
+        .footer-bottom{
+            height: 20vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            // border-radius: 0px;
+                
+            h2{
+                height: 30vh;
+                font-size: 20rem;
+                font-family: Helvetica;
+                transition: all 0.5s ease;
+                -webkit-text-stroke: 2px  black;
+            }
+            &:hover{
+                h2{
+                    background-color: #FD1C00;
+                    color: white;
+                    -webkit-text-stroke: 2px  black;
+                }
+            }
+        }
+    }
+        
+}
+
+@media (max-width: 768px) {
+
+    main {
+
+        .Landing-page {
+            height: auto;
+
+            .section-top {
+                height: auto;
+                min-height: 70vh;
+
+                nav {
+                    height: auto;
+                    flex-direction: column;
+                    gap: 2rem;
+
+                    .nav-left,
+                    .nav-right {
+                        width: 100%;
+                        height: auto;
+                    }
+
+                    .nav-left {
+                        padding: 0.5rem;
+                    }
+
+                    .nav-right {
+                        padding: 0.5rem;
+
+                        p {
+                            width: 100%;
+                            font-size: 0.9rem;
+                        }
+                    }
+                }
+
+                .heading {
+                    height: auto;
+                    min-height: 30vh;
+                    align-items: end;
+
+                    h1 {
+                        font-size: 22vw;
+                    }
+                }
+            }
+
+            .section-bottom {
+                height: 40vh;
+            }
+        }
+
+
+        .Landing-page2 {
+            height: auto;
+
+            .section1 {
+                height: auto;
+                min-height: 350px;
+                flex-direction: column;
+
+                .number-div {
+                    width: 100%;
+                    height: 100px;
+
+                    h2 {
+                        font-size: 7rem;
+                        letter-spacing: -0.5rem;
+                    }
+                }
+
+                .info-div {
+                    width: 100%;
+                    height: auto;
+                    flex-direction: column;
+
+                    .discription {
+                        width: 100%;
+                        min-height: 180px;
+                        padding: 1rem;
+
+                        p {
+                            font-size: 1.1rem;
+                        }
+                    }
+
+                    .image {
+                        width: 100%;
+                        height: 250px;
+                        transform: translateY(0);
+                    }
+                }
+            }
+        }
+
+
+        .marque-section {
+            height: 100px;
+
+            .marque-track {
+
+                img {
+                    width: 120px;
+                    flex-shrink: 0;
+                }
+            }
+        }
+
+
+        footer {
+
+            .footer {
+                height: auto;
+                flex-direction: column;
+
+                .left-section {
+                    width: 100%;
+                    height: auto;
+
+                    .footer-image {
+                        height: 350px;
+                    }
+
+                    .footer-para {
+                        padding: 1rem;
+
+                        p {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+
+            .footer-bottom {
+                height: 120px;
+
+                h2 {
+                    height: auto;
+                    font-size: 20vw;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}
