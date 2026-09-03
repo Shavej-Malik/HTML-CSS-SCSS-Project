@@ -1,0 +1,752 @@
+@font-face {
+    font-family: monument;
+    src: url('./Fonts/MonumentExtended-Regular.woff2');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    width: 100%;
+    background-color: beige;
+    position: relative;
+    /*Do this in every project*/
+    padding-top: 1px;
+}
+
+.nav {
+    height: 12vh;
+    width: 100%;
+    margin-top: 5vh;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav h1 {
+    height: 100%;
+    width: 24%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 2px solid black;
+    font-family: monument;
+    letter-spacing: -5px;
+    font-weight: 800;
+    font-size: 3rem;
+    position: relative;
+}
+
+.nav h1::after {
+    content: "©";
+    font-size: small;
+    font-weight: 100;
+    position: absolute;
+    top: 25%;
+    right: 15%;
+}
+
+.nav h1::before {
+    content: "model management";
+    position: absolute;
+    color: rgb(84, 84, 84);
+    top: 70%;
+    right: 20%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    letter-spacing: 1px;
+    font-size: 10px;
+}
+
+.nav h2 {
+    height: 100%;
+    width: 22%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 2px solid black;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.nav h2:nth-last-child(1) {
+    border-right: none;
+    width: 10%;
+}
+
+.nav h3 {
+    display: none;
+}
+
+.center {
+    height: 85vh;
+    padding: 4vw;
+    position: relative;
+}
+
+.content {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.content video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.content .overlay {
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 3rem;
+    color: white;
+}
+
+.content .overlay .overlay1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2vw;
+}
+
+.content .overlay .overlay1 h1 {
+    font-family: monument;
+    letter-spacing: 1px;
+    font-size: 3vw;
+    mix-blend-mode: difference;
+}
+
+.content .overlay .overlay1 h2 {
+    font-size: 2vw;
+    color: white;
+    padding: 2vw 2vw;
+    border-radius: 50%;
+    border: 1px solid white;
+    border-bottom: 3px solid white;
+}
+
+.content .overlay .overlay2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid white;
+}
+
+.content .overlay .overlay2 h1 {
+    font-size: 1vw;
+}
+
+.marque {
+    height: 30vh;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.marque .marque-track {
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+    display: inline-block;
+    animation: scroll 10s linear infinite;
+}
+
+.marque .marque-track img {
+    height: 90%;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 1vw;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.alphabet {
+    height: 10vh;
+    width: 100%;
+    margin-top: 5vh;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 0vw 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-style: italic;
+}
+
+.alphabet h1 {
+    font-family: Arial, Helvetica, sans-seri;
+    text-decoration: underline;
+    margin-right: 2vw;
+}
+
+.alphabet h2 {
+    font-family: Arial, Helvetica, sans-seri;
+    font-size: 1.5vw;
+    height: 45px;
+    width: 55px;
+    border-radius: 50%;
+    font-weight: 400;
+    letter-spacing: 4px;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.alphabet h2:hover {
+    border: 1px solid black;
+}
+
+.page {
+    height: 100vh;
+    width: 100%;
+    padding: 4vw;
+    position: relative;
+    display: flex;
+    gap: 10px;
+}
+
+.page .left {
+    height: 100%;
+    width: 55%;
+    overflow: hidden;
+}
+
+.page .left img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    filter: saturate(0%);
+}
+
+.page .left img:hover {
+    transform: scale(1.1);
+    filter: saturate(100%);
+}
+
+.page .right {
+    height: 100%;
+    width: 45%;
+    overflow: hidden;
+}
+
+.page .right .image {
+    height: 70%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.page .right .image img {
+    object-fit: cover;
+    object-position: top;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    filter: saturate(0%);
+}
+
+.page .right .image img:hover {
+    transform: scale(1.1);
+    filter: saturate(100%);
+}
+
+.page .right .para {
+    padding: 2vw;
+    display: flex;
+    gap: 10px;
+}
+
+.page .right .para .para1 {
+    font-size: 2rem;
+    line-height: 1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page .right .para .para2 {
+    font-size: 20px;
+    margin-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page2 {
+    height: 90vh;
+    width: 100%;
+    padding: 4vw;
+    display: flex;
+    gap: 10px;
+}
+
+.page2 .left {
+    height: 100%;
+    width: 40%;
+    padding: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.page2 .left img {
+    height: 70%;
+    margin-top: 50px;
+}
+
+.page2 .left h4 {
+    font-size: 2vw;
+    line-height: 1;
+    font-weight: 500;
+}
+
+.page2 .right {
+    height: 100%;
+    width: 60%;
+    overflow: hidden;
+}
+
+.page2 .right img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    filter: saturate(0%);
+
+}
+
+.page2 .right img:hover {
+    transform: scale(1.1);
+    filter: saturate(100%);
+}
+
+.image-section {
+    height: 100vh;
+    width: 100%;
+    padding: 4vw;
+}
+
+.image-section .image {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.image-section .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    cursor: pointer;
+    transition: all ease 0.5s;
+    filter: saturate(0%);
+}
+
+.image-section .image img:hover {
+    transform: scale(1.1);
+    filter: saturate(100%);
+}
+
+.update-text {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.update-text h1 {
+    font-family: monument;
+    text-transform: uppercase;
+}
+
+.update-section {
+    width: 100%;
+    padding: 4vw;
+}
+
+.update-section .main-div {
+    height: 100%;
+    width: 100%;
+}
+
+.update-section .main-div .first-section {
+    width: 100%;
+    padding: 2vw;
+    display: flex;
+    border-top: 2px solid black;
+    transition: all 0.5s ease;
+}
+
+.update-section .main-div .first-section:nth-last-child(1) {
+    border-bottom: 2px solid black;
+}
+
+.update-section .main-div .first-section p {
+    text-transform: uppercase;
+    margin-right: 10%;
+}
+
+.update-section .main-div .first-section img {
+    width: 8%;
+    border-radius: 10px;
+    margin-right: 20%;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.update-section .main-div .first-section:hover img {
+    opacity: 1;
+}
+
+.update-section .main-div .first-section:hover {
+    background-color: rgba(229, 229, 110, 0.788);
+}
+
+.update-section .main-div .first-section h4 {
+    width: fit-content;
+    line-height: 1.3;
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+.update-section .main-div .first-section h4 p {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.marque2 {
+    white-space: nowrap;
+    /* overflow-x: auto; use when we make scrollable bar */
+    overflow-x: hidden;
+    overflow-y: hidden;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.marque2 .marque2-track {
+    width: 100%;
+    display: inline-block;
+    animation: scroll2 10s linear infinite;
+    padding: 0vw 2.5vw;
+
+}
+
+.marque2 .marque2-track h1 {
+    width: fit-content;
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-family: monument;
+    color: transparent;
+    letter-spacing: 10px;
+    -webkit-text-stroke: 0.1px rgb(84, 83, 83);
+}
+
+@keyframes scroll2 {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+footer {
+    height: 10vh;
+    margin-top: 5vh;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    display: flex;
+}
+
+footer h1 {
+    height: 100%;
+    width: 25%;
+    border-right: 2px solid black;
+    font-family: monument;
+    letter-spacing: -5px;
+    font-weight: 800;
+    font-size: 3rem;
+    position: relative;
+    padding-top: 1%;
+    margin-left: 10rem;
+}
+
+footer h1::after {
+    content: "©";
+    font-size: small;
+    font-weight: 100;
+    position: absolute;
+    top: 20%;
+    right: 22%;
+}
+
+footer h1::before {
+    content: "model management";
+    position: absolute;
+    color: rgb(84, 84, 84);
+    top: 75%;
+    right: 25%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    letter-spacing: 1px;
+    font-size: 10px;
+}
+
+footer h2 {
+    height: 100%;
+    width: 27%;
+    font-size: 20px;
+    font-weight: 200;
+    padding-top: 2%;
+    border-right: 2px solid black;
+    display: flex;
+    justify-content: center;
+}
+
+footer h2:nth-last-child(1) {
+    border-right: none;
+}
+
+.copyright {
+    height: 3vh;
+    width: 100%;
+    margin-top: 1vw;
+    display: flex;
+    justify-content: center;
+}
+
+.copyright h1 {
+    font-family: monument;
+    font-size: 1rem;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+@media (max-width:768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav {
+        height: 6vh;
+        margin-top: 2vh;
+        padding: 0 5vw;
+    }
+
+    .nav h1 {
+        width: 40%;
+        justify-content: flex-start;
+        border-right: none;
+        letter-spacing: 0px;
+        font-size: 1.5rem;
+    }
+
+    .nav h1::after {
+        display: none;
+    }
+
+    .nav h1::before {
+        display: none;
+    }
+
+    .nav h2 {
+        display: none;
+    }
+
+    .nav h2:nth-last-child(1) {
+        display: none;
+    }
+
+    .nav h3 {
+        display: block;
+    }
+
+    .center {
+        height: 45vh;
+        position: relative;
+    }
+
+    .content .overlay {
+        height: 35%;
+        padding: 2rem;
+    }
+
+    .content .overlay .overlay1 h1 {
+        letter-spacing: 2px;
+        font-size: 4vw;
+        mix-blend-mode: difference;
+    }
+
+    .content .overlay .overlay2 h1 {
+        font-size: 3vw;
+    }
+
+    .content .overlay .overlay2 img {
+        height: 12vw;
+    }
+
+    .marque {
+        height: 10vh;
+    }
+
+    .alphabet {
+        height: 5vh;
+        margin-top: 2vh;
+    }
+
+    .alphabet h1 {
+        font-size: 5vw;
+    }
+
+    .alphabet h2 {
+        font-size: 1.7vw;
+    }
+
+    .page {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .page .left {
+        width: 100%;
+    }
+
+    .page .left img {
+        width: 100%;
+        filter: saturate(100%);
+    }
+
+    .page .right {
+        width: 100%;
+    }
+
+    .page .right .image img {
+        width: 100%;
+        filter: saturate(100%);
+    }
+
+    .page .right .para .para1 {
+        font-size: 1rem;
+        font-weight: 900;
+    }
+
+    .page2 {
+        flex-direction: column;
+    }
+
+    .page2 .left {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .page2 .left img {
+        height: 70%;
+        margin-top: -100px;
+    }
+
+    .page2 .left h4 {
+        font-size: 4vw;
+        font-weight: 600;
+    }
+
+    .page2 .right {
+        width: 100%;
+        margin-top: -100px;
+    }
+
+    .page2 .right img {
+        filter: saturate(100%);
+        margin-top: -40px;
+    }
+
+    .image-section {
+        height: 30vh;
+    }
+
+    .image-section .image {
+        margin-top: -60px;
+    }
+
+    .image-section .image img {
+        filter: saturate(100%);
+    }
+
+    .update-text {
+        margin-top: -50px;
+    }
+
+    .update-section .main-div .first-section {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .update-section .main-div .first-section img {
+        height: 100px;
+        width: 100px;
+        opacity: 1;
+    }
+
+    .marque2 .marque2-track {
+        width: max-content;
+        padding: 0 3vw;
+    }
+
+    .marque2 .marque2-track h1 {
+        font-size: 2.5rem;
+    }
+
+    footer {
+        height: 8vh;
+        margin-top: 2vh;
+        justify-content: center;
+    }
+
+    footer h1 {
+        border-right: none;
+        letter-spacing: 10px;
+        font-weight: 500;
+        font-size: 3rem;
+        margin-left: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer h1::after {
+        display: none;
+    }
+
+    footer h1::before {
+        display: none;
+    }
+
+    footer h2 {
+        display: none;
+    }
+
+}
